@@ -4,6 +4,41 @@
 
 
 
+## Android App
+
+![캣봇App](./_assets/app_image01.png)
+
+해당 앱을 사용하기 위해서는 `zFINAL_CAT_BOT_VERSION`소스를 업로드 해주세요.
+
+뒤에 숫자는 생산된 시기에 따라 다소 차이가 있을 수 있습니다.
+
+조향장치 부분인 앞 부분의 모양이 이와 같다면 **VERSION1**입니다.
+
+### Version 1.0
+
+[CODE Version1.0](./zFINAL_CAT_BOT_VERSION1/zFINAL_CAT_BOT_VERSION1.ino)
+
+![](./_assets/catbot_direction_servo.png)
+
+
+
+![네오3D솔루션 컨트롤러](./_assets/app_image02.png)
+
+해당 앱을 사용하기 위해서는 `zTOOLS_CAT_BOT_CONTROL`소스를 업로드 해주세요.
+
+```c
+// line 45~47
+int LEFT_ANGLE = 60;
+int BASE_ANGLE = 90;
+int RIGHT_ANGLE = 120;
+```
+
+해당 내용에서 `LEFT_ANGLE`의 값과 `RIGHT_ANGLE`의 값을 변경해주면 조향장치의 각도가 더 커지기에 조향을 빠르게 할 수 있습니다.
+
+[TOOL CODE Version1.0](./zTOOLS_CAT_BOT_CONTROL/zTOOLS_CAT_BOT_CONTROL.ino)
+
+
+
 ## MBlock5
 
 ### 1. LED
@@ -170,38 +205,3 @@ LED와 부저를 이용하여 경찰차 사이렌을 실습해보도록 하겠�
 ![RC_CAR](./_assets/mblock_09bluetooth_rc_car.png)
 
 
-
-
-
-## Android App
-
-![캣봇App](./_assets/app_image01.png)
-
-해당 앱을 사용하기 위해서는 `zFINAL_CAT_BOT_VERSION`소스를 업로드 해주세요.
-
-뒤에 숫자는 생산된 시기에 따라 다소 차이가 있을 수 있습니다.
-
-조향장치 부분인 앞 부분의 모양이 이와 같다면 **VERSION1**입니다.
-
-### Version 1.0
-
-[CODE Version1.0](./zFINAL_CAT_BOT_VERSION1/zFINAL_CAT_BOT_VERSION1.ino)
-
-![](./_assets/catbot_direction_servo.png)
-
-
-
-![네오3D솔루션 컨트롤러](./_assets/app_image02.png)
-
-해당 앱을 사용하기 위해서는 `zTOOLS_CAT_BOT_CONTROL`소스를 업로드 해주세요.
-
-```c
-// line 45~47
-int LEFT_ANGLE = 60;
-int BASE_ANGLE = 90;
-int RIGHT_ANGLE = 120;
-```
-
-해당 내용에서 `LEFT_ANGLE`의 값과 `RIGHT_ANGLE`의 값을 변경해주면 조향장치의 각도가 더 커지기에 조향을 빠르게 할 수 있습니다.
-
-[TOOL CODE Version1.0](./zTOOLS_CAT_BOT_CONTROL/zTOOLS_CAT_BOT_CONTROL.ino)
