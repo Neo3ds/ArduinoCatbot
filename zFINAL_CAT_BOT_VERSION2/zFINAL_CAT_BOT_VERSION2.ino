@@ -1,7 +1,11 @@
-/**
- * 아두이노 캣봇 VERSION 1.0
- *   - 구동
- *   - 스마트 주행(초음파 센서 거리감지) -> 장애물 회피주행
+/*
+ * 캣봇 중급자 코드
+ * Author: TaeJune Joung
+ * Enterprise: NEO3DS
+ * Date: 21.12.20
+ * License:
+ *  본 코드의 저작권은 위와 같으며,
+ *  상업적인 무단 도용시 법적인 책임을 물을 수 있음을 공지합니다.
  */
 
 #include <SoftwareSerial.h>
@@ -27,7 +31,7 @@ Servo servo;
 
 int motorSpeed = 255;
 unsigned long intervalTime = 200;
-int servoAngleList[3] = {90, 60, 120};
+int servoAngleList[3] = {90, 160, 20};
 
 char cmd;
 char beforeCommand = 'x';
@@ -96,7 +100,6 @@ void getBluetoothData() {
     if (cmd != beforeCommand) {
       motorStop();
       beforeCommand = cmd;
-      delay(10);
     }
     
     switch (cmd) {
@@ -252,17 +255,18 @@ void setup() {
   pinMode(PIN_BUZZER, OUTPUT);
 
   servo.attach(PIN_SERVO);
-  servo.write(90);
+  servo.write(servoAngleList[0]);
 
-  int notes[3] = {572, 792, 1024};
-  int times[3] = {200, 150, 100};
+  tone(PIN_BUZZER, 912, 100);
+  delay(150);
+  tone(PIN_BUZZER, 912, 100);
+  delay(150);
+
   boolean ledState = false;
   for (int i=0; i < 5; i++) {
     ledState = !ledState;
     ledCtrl(ledState, ledState);
-    if (ledState)
-      tone(PIN_BUZZER, notes[i>>1], times[i>>1]);
-    delay(300);
+    delay(200);
   }
 }
 

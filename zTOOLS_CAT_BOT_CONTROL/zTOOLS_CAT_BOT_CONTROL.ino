@@ -1,7 +1,7 @@
 /**
- * 캣봇 다기능 처리
+ * 캣봇 다기능 처리 Version 2.0
  * @Auth TaeJuneJoung
- * @Date 2021.10.18
+ * @Date 2022.03.28
  */
 
 #define PIN_RIGHT_DC_FW      2
@@ -42,9 +42,9 @@ int LEFT_SIGN = 2;
 int RIGHT_SIGN = 3;
 int BACK_SIGN = 4;
 
-int LEFT_ANGLE = 60;
+int LEFT_ANGLE = 160;
 int BASE_ANGLE = 90;
-int RIGHT_ANGLE = 120;
+int RIGHT_ANGLE = 20;
 int beforeAngle = 90;
 
 int motorSpeed = 100;

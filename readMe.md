@@ -2,40 +2,37 @@
 
 네오아두보드를 이용한 캣봇 단계별 코딩
 
+먼저, Catbot은 버전이 1과 2로 나뉘어져 있습니다.
+
+
+
+**현재 페이지에 있는 소스는 Version 2.0** 입니다.
+
+
+
+버전이 나뉘어지는 방식은 아래와 같습니다.
+
+조향장치 부분인 앞 부분의 모양이 이와 같다면 **VERSION1**입니다.
+
+### Version 1.0
+
+[CODE Version1.0](https://github.com/Neo3ds/ArduinoCatbot/releases/tag/version1.0)
+
+버전 1.0이시라면 해당 링크를 이용하셔서 zip파일들을 다운 받아 진행해주세요.
+
+![](./_assets/catbot_direction_servo.png)
+
 
 
 ## Android App
 
 ![캣봇App](./_assets/app_image01.png)
 
-해당 앱을 사용하기 위해서는 `zFINAL_CAT_BOT_VERSION`소스를 업로드 해주세요.
 
-뒤에 숫자는 생산된 시기에 따라 다소 차이가 있을 수 있습니다.
-
-조향장치 부분인 앞 부분의 모양이 이와 같다면 **VERSION1**입니다.
-
-### Version 1.0
-
-[CODE Version1.0](./zFINAL_CAT_BOT_VERSION1/zFINAL_CAT_BOT_VERSION1.ino)
-
-![](./_assets/catbot_direction_servo.png)
 
 
 
 ![네오3D솔루션 컨트롤러](./_assets/app_image02.png)
-
-해당 앱을 사용하기 위해서는 `zTOOLS_CAT_BOT_CONTROL`소스를 업로드 해주세요.
-
-```c
-// line 45~47
-int LEFT_ANGLE = 60;
-int BASE_ANGLE = 90;
-int RIGHT_ANGLE = 120;
-```
-
-해당 내용에서 `LEFT_ANGLE`의 값과 `RIGHT_ANGLE`의 값을 변경해주면 조향장치의 각도가 더 커지기에 조향을 빠르게 할 수 있습니다.
-
-[TOOL CODE Version1.0](./zTOOLS_CAT_BOT_CONTROL/zTOOLS_CAT_BOT_CONTROL.ino)
 
 
 
@@ -201,6 +198,10 @@ LED와 부저를 이용하여 경찰차 사이렌을 실습해보도록 하겠�
 함수를 이용하지 않고 블록을 짰기에 블록이 깁니다.
 
 함수를 이용하면 간단하게 할 수 있습니다. (해당 부분 생략)
+
+:rotating_light:현재 블록은 Version 1.0이며 Version 2.0과 Servo motor의 각도만 변경되었습니다.
+
+`L` 160도 / `R` 20도
 
 ![RC_CAR](./_assets/mblock_09bluetooth_rc_car.png)
 
